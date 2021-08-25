@@ -1,0 +1,211 @@
+header{
+background: url(../images/fortnite14.jpg)no-repeat;
+background-size: cover;
+background-position:top center ;
+height: 900px;
+}
+
+.top-menu{
+    text-align: center;
+}
+
+.menu{
+padding: 0;
+margin: 0;
+}
+
+.menu li{
+   display: inline block;
+   margin-right: 38px;
+   margin-top: 40px;
+   color: aqua;
+   
+}
+
+.titles{
+    text-align: center;
+    margin-top: 250px;
+}
+
+.titles h1, .titles h2{
+    color: oldlace;
+}
+.titles h1{
+    font-size: 75px;
+    text-transform: uppercase;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+}
+.titles h2{
+    font-size: 50px;
+    font-weight: 300;
+    font-family: 'Droid Serif';
+    font-style: italic;
+}
+
+.head-but{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.blue-but{
+    width: 240px;
+    padding: 15px 0;
+    border: none;
+    margin: 0 auto;
+border-radius: 3px;
+cursor: pointer;
+text-transform: uppercase;
+color: black;
+font-weight: bold;
+background-color: lime;
+outline: none;
+}
+
+.blue-but:hover{
+    border: 1px solid black;
+    background: black;
+    color: lime;
+}
+
+/* первая секция */
+.section1{
+    background-color: darkviolet;
+}
+
+.title-text {
+    text-align: center;
+    padding-top: 120px;
+    
+}
+
+.title-text h2 {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+     margin: 0;
+}
+
+.title-text p{
+    color: black;
+    font-size: 16px;
+    margin: 5px;
+}
+
+
+.info{
+    margin-top: 20px;
+    margin-bottom: 118px;
+}
+
+.content {
+text-align: center;
+margin-top: 50px;
+}
+
+.content img{
+    margin-bottom: 20px;
+    width: 80px;
+    height: 80px;
+}
+
+.content h3{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.content p{
+    color: deepskyblue;
+    font-size: 14px;
+}
+
+.about {
+    padding-top: 84px;
+    background-color: whitesmoke;
+}
+
+.about img{
+    display: block;
+    margin: auto;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 7px solid cornflowerblue;
+}
+
+.top-line img{
+   width: auto !important;
+   height: auto !important;
+   border: 0 !important;
+}
+
+.about-items-right h4,
+.about-items-left h4 {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: darkblue;
+}
+
+.about-items-right h4 span,
+.about-items-left h4 span {
+text-transform: uppercase;
+}
+
+.about-items-right p,
+.about-items-left p {
+font-size: 14px;
+font-family: 'Roboto Slab', sans-serif;
+color: darkred;
+line-height: 1.5;
+}
+
+.story {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 7px solid rgb(255, 255, 255);
+    color: #fff;
+    padding-top: 30px;
+    margin: 0 auto;
+    cursor: pointer;
+    margin-bottom: 126px;
+    background-color: steelblue;
+}
+
+.story h4 {
+    text-transform: uppercase;
+    font-size: 18px;
+    text-align: center;
+}
+
+/*---------------------------- секция members------------------------------- */
+
+.members {
+    height: 820px;
+    background: -webkit-linear-gradient(180deg, rgb(154, 207, 170), rgb(14, 13, 26));
+    background: -moz-linear-gradient(180deg, rgb(154, 207, 170), rgb(14, 13, 26));
+    background: linear-gradient(180deg, rgb(154, 207, 170), rgb(14, 13, 26));
+}
+.team {
+    margin-top: 83px;
+    text-align: center;
+}
+
+.team > img {
+    margin-bottom: 30px;
+    display: block;
+    margin: auto;
+    width: 235px;
+    height: 235px;
+    /* border: 7px solid #f1f1f1;
+    border-radius: 50%;*/
+}
+
+.team-items p {
+    color: rgb(161, 150, 135);
+}
+
+.team-items h5 {
+    padding-top: 30px;
+}

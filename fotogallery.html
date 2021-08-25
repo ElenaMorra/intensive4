@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Верхние 3 мета-тега *должны* быть указаны в первую очередь в head; любой другой контент в head должен быть указан *после* этих тегов -->  
+    <title>Фотогалерея</title>
+
+    <!-- Bootstrap -->  
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+          text-align: center;
+        }
+
+        h2 {
+          margin: 50px auto;
+          font-size: 100px;
+          font-weight: 300;
+          font-family: Arial, Helvetica, sans-serif;
+          font-style: italic;
+        }
+
+        .btn-back {
+          width: 200px;
+          height: 70px;
+          border-radius: 50px;
+          background-color: chartreuse;
+          border: none;
+          font-family:Arial, Helvetica, sans-serif;
+          font-style: italic;
+          font-weight: bold;
+          font-size: 20px;
+          color: darkblue;
+          cursor: pointer;
+          margin-top: 50px;
+          margin-bottom: 100px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-back:hover {
+          background-color: darkblue;
+          color: chartreuse;
+        }
+
+        .bgvideo {
+          position: fixed;
+          right: 0;
+          bottom: 0;
+          min-width: 100%;
+          min-height: 100%;
+          width: auto;
+          height: auto;
+          z-index: -9999;
+        }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js for IE8 support of HTML5 elements and media queries -->  
+    <!-- Предупреждение: Respond.js не работает при просмотре страницы через файл:// -->  
+    <!--[if lt IE 9]>
+ <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script >
+ <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+ <![endif]-->  
+  </head>
+  <body>
+
+    <video autoplay loop muted class="bgvideo"> 
+      <source src="video/Pexels Videos 1943484.mp4" type="video/mp4">
+    </video>
+    <h2>Фотогалерея</h2>
+
+    <!-- здесь будет код модального окна -->
+
+    <div class="modal fade" id="image-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  <div class="modal-title">Просмотр изображения</div>
+              </div>
+              <div class="modal-body">
+                  <img class="img-responsive center-block" src="" alt="">
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+
+    <!-- добавляем фото -->
+
+    <div class="row">
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+              <img src="images/fort.jpg" alt="">
+            </a>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+              <img src="images/fortnajt.jpg" alt="">
+            </a>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+              <img src="images/fortnine3.jpg" alt="">
+            </a>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+              <img src="images/save the world.jpg" alt="">
+            </a>
+          </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="images/world cup.jpg" alt="">
+          </a>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="images/ariane grande.jpg" alt="">
+          </a>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="images/ninja.png" alt="">
+          </a>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="images/16 season.jpg" alt="">
+          </a>
+        </div>
+  </div>
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/A6gPMGgqIKI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+  <div class="row">
+    <div class="col-lg-12"><a href="index.html">
+      <button class="btn-back">
+        На главную
+      </button></a></div>
+  </div>
+
+ 
+
+
+    <!-- на jQuery (необходим для Bootstrap - х JavaScript плагины) -->  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Включают все скомпилированные плагины (ниже), или включать отдельные файлы по мере необходимости -->  
+    <script src="js/bootstrap.min.js"></script>
+   <script>
+    // После загрузки DOM-дерева (страницы)
+    $(function() {
+        //при нажатии на ссылку, содержащую Thumbnail
+        $('a.thumbnail').click(function(e) {
+            //отменить стандартное действие браузера
+            e.preventDefault();
+            //присвоить атрибуту scr элемента img модального окна
+            //значение атрибута scr изображения, которое обёрнуто
+            //вокруг элемента a, на который нажал пользователь
+            $('#image-modal .modal-body img').attr('src', $(this).find('img').attr('src'));
+            //открыть модальное окно
+            $("#image-modal").modal('show');
+        });
+        //при нажатию на изображение внутри модального окна
+        //закрыть его
+        $('#image-modal .modal-body img').on('click', function() {
+            $("#image-modal").modal('hide')
+        });
+    });
+</script>
+</body>
+</html>
